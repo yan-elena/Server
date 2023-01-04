@@ -6,4 +6,4 @@ include("greenhouseCommunicationGateway")
 include("soilMoistureService")
 include("humidityService")
 include("temperatureService")
-
+include("operationService")
