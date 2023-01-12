@@ -52,6 +52,7 @@ public class ParameterClientCommunicationHTTPAdapterTest {
     private Gson gson = GsonUtils.createGson();
 
 
+
     @BeforeAll
     public static void start(Vertx vertx, VertxTestContext testContext){
         System.out.println("Brightness service initializing");
