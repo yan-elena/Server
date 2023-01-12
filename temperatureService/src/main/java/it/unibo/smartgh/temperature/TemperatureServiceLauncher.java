@@ -17,6 +17,7 @@ public class TemperatureServiceLauncher {
     private static final String HOST = "localhost";
     private static final int PORT = 8890;
     private static final String MONGODB_HOST = "localhost";
+
     private static final int MONGODB_PORT = 27017;
 
     public static void main(String[] args) {
