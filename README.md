@@ -18,7 +18,11 @@ To follow this deployment option you must have installed on your host:
 - the 11 version of the openjdk: [https://openjdk.org/](https://openjdk.org/)
 - Gradle: [https://gradle.org/](https://gradle.org/)
 
-Once this is done if you decide to deploy the different services using `docker` and `docker-compose` you need to locate yourself in the Server directory and run the following command:
+Once you have verified that you have everything you need to run the application, you need to move to the Server directory and launch the `gradle shadows` task, via the following command:
+
+      ./gradlew shadowJar
+
+At this point done if you decide to deploy the different services using `docker` and `docker-compose` you need to locate yourself in the Server directory and run the following command:
 
       docker compose up --build
       
@@ -38,7 +42,7 @@ To follow this deployment option you must have installed on your host:
 
 Once you have verified that you have everything you need to run the application, you need to move to the Server directory and launch the `gradle shadows` task, via the following command:
 
-      .\gradlew shadows
+      ./gradlew shadowJar
 
 At this point, for each micro-service, the corresponding .jar file has been made, and in order to run them, you need to move to the sub-module directory then in the `/buld/libs` directory and run the command:
       
