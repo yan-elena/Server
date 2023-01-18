@@ -5,7 +5,7 @@ This repository contains the various micro-services of which the SmartGreenhouse
 
 The different services implemented all have their own REST API, in particular the set of requests that can be made has been documented and formalized through [OpenAPI specifications](https://swagger.io/specification/) and the details can be viewed at the following link: [SmartGreenhouse Server 1.0.0](https://app.swaggerhub.com/apis/ANNAVITALI4/SmartGreenhouseServer/1.0.0)
 
-## Deploy instructions
+## Deployment instructions
 
 For deployment, first it is necessary to specifically configure the different services, in order to do so it is necessary to read the different README.md files contained within each of the sub-modules. 
 
@@ -39,6 +39,8 @@ To follow this deployment option you must have installed on your host:
 - the 11 version of the openjdk: [https://openjdk.org/](https://openjdk.org/)
 - Gradle: [https://gradle.org/](https://gradle.org/)
 - MongoDB: [https://www.mongodb.com/](https://www.mongodb.com/)
+
+Before executing the application you need to import the collection that you can find on the `Server/collection` directory inside mongodb in particular you have to: create a new database with name **greenhouse** and importing the greenhouse collection identified by the `.json` contained in the directory indicated before.
 
 Once you have verified that you have everything you need to run the application, you need to move to the Server directory and launch the `gradle shadows` task, via the following command:
 
