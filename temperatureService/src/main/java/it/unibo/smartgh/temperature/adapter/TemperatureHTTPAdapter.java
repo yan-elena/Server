@@ -83,7 +83,7 @@ public class TemperatureHTTPAdapter extends AbstractAdapter<PlantValueAPI> {
             res.setStatusMessage(BAD_REQUEST_MESSAGE);
             res.end();
         }else {
-            Future<PlantValue> fut = this.getModel().getCurrentValue("63af0ae025d55e9840cbc1fa");
+            Future<PlantValue> fut = this.getModel().getCurrentValue(greenhouseId);
             fut.onSuccess(brightnessValue -> res.end(gson.toJson(brightnessValue, PlantValueImpl.class)))
                     .onFailure(exception -> handleFailureInGetMethod(res, exception));
         }
