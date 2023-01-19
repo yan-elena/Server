@@ -211,7 +211,9 @@ public class GreenhouseModel implements GreenhouseAPI{
             }
         } else {
             if (temp.compareTo(min + 5.0) >= 0 || temp.compareTo(max - 5.0) <= 0) {
-                insertOperation(gh.getId(), parameter, "TEMPERATURE turn-off", gh.getActualModality().toString());
+                if(automatic) {
+                    insertOperation(gh.getId(), parameter, "TEMPERATURE turn-off", gh.getActualModality().toString());
+                }
             }
         }
         sendToClient(gh.getId(), parameter, temp, status);
