@@ -8,7 +8,7 @@ db.greenhouse.insertMany( [
   plant: {
     name: 'Peperoncino rosso calabrese',
     description: 'È un arbusto a portamento eretto, ha foglie lanceolate, verdi. Può essere presente una peluria su fusto e pagina superiore delle foglie. I fiori, bianchi, singoli, con stami giallo/verdi, a 5-7 petali, compaiono all\'ascella delle foglie, uno per nodo, in estate.',
-    img: 'http://www.giardinaggio.it/giardino/piante-da-giardino/peperoncini_NG4.jpg',
+    img: 'http://www.peperoncinodicalabria.it/wp-content/uploads/2015/08/naso-di-cane-peperoncino-calabrese.jpg',
     minTemperature: 10.0,
     maxTemperature: 35.0,
     minBrightness: 3000.0,
