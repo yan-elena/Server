@@ -13,6 +13,9 @@ config.plugins.push(
             { "path": "build/libs/*.jar" },
         ]
     }],
+    ["@semantic-release/npm", {
+      "npmPublish": false
+    }],
     "@semantic-release/git",
 )
 module.exports = config
