@@ -1,3 +1,15 @@
+## [1.0.1](https://github.com/SmartGreenhouse-22-23/Server/compare/1.0.0...1.0.1) (2023-01-25)
+
+
+### Dependency updates
+
+* **core-deps:** update dependency gradle to v7.6 ([dc8398b](https://github.com/SmartGreenhouse-22-23/Server/commit/dc8398b9db4bf2c0716e47d36203c0b8fde600bd))
+* **deps:** update dependency com.google.code.gson:gson to v2.8.9 ([2b12aee](https://github.com/SmartGreenhouse-22-23/Server/commit/2b12aeec3eb1d0bec801e683afbcda7cc139565e))
+* **deps:** update dependency io.vertx:vertx-junit5 to v4.1.8 ([010420c](https://github.com/SmartGreenhouse-22-23/Server/commit/010420cf89f2488957519755bed436612425d52f))
+* **deps:** update dependency org.mongodb:mongodb-driver-sync to v4.8.2 ([a66f269](https://github.com/SmartGreenhouse-22-23/Server/commit/a66f2693ab33365053a38dc47415ad770e687623))
+* **deps:** update junit5 monorepo to v5.9.2 ([8aa829c](https://github.com/SmartGreenhouse-22-23/Server/commit/8aa829c1e1a989672c86c82342fb97f4411643a5))
+* **deps:** update vertx to v4.3.7 ([2e538ac](https://github.com/SmartGreenhouse-22-23/Server/commit/2e538ac92f6a6c7202dddd635a02905ba612d9f3))
+
 ## 1.0.0 (2023-01-24)
 
 
