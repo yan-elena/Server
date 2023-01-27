@@ -9,6 +9,8 @@ import io.vertx.ext.web.client.WebClient;
 import it.unibo.smartgh.greenhouse.controller.GreenhouseController;
 import it.unibo.smartgh.greenhouse.entity.greenhouse.Greenhouse;
 import it.unibo.smartgh.greenhouse.entity.greenhouse.Modality;
+import it.unibo.smartgh.greenhouse.entity.plant.Parameter;
+import it.unibo.smartgh.greenhouse.entity.plant.ParameterType;
 import it.unibo.smartgh.greenhouse.entity.plant.Plant;
 
 import java.io.IOException;
@@ -102,28 +104,29 @@ public class GreenhouseModel implements GreenhouseAPI{
 
     private void checkAlarm(Greenhouse greenhouse, JsonObject parameters) {
         Plant plant = greenhouse.getPlant();
+        Map<ParameterType, Parameter> parametersMap = plant.getParameters();
 
         checkTemperature(greenhouse,
-                plant.getMinTemperature(),
-                plant.getMaxTemperature(),
+                parametersMap.get(ParameterType.TEMPERATURE).getMin(),
+                parametersMap.get(ParameterType.TEMPERATURE).getMax(),
                 valueOf(parameters.getValue("Temp").toString()),
                 greenhouse.getActualModality() == Modality.AUTOMATIC);
 
         checkBrightness(greenhouse,
-                plant.getMinBrightness(),
-                plant.getMaxBrightness(),
+                parametersMap.get(ParameterType.BRIGHTNESS).getMin(),
+                parametersMap.get(ParameterType.BRIGHTNESS).getMax(),
                 valueOf(parameters.getValue("Bright").toString()),
                 greenhouse.getActualModality() == Modality.AUTOMATIC);
 
         checkSoilMoisture(greenhouse,
-                plant.getMinSoilMoisture(),
-                plant.getMaxSoilMoisture(),
+                parametersMap.get(ParameterType.SOIL_MOISTURE).getMin(),
+                parametersMap.get(ParameterType.SOIL_MOISTURE).getMax(),
                 valueOf(parameters.getValue("Soil").toString()),
                 greenhouse.getActualModality() == Modality.AUTOMATIC);
 
         checkHumidity(greenhouse,
-                plant.getMinHumidity(),
-                plant.getMaxHumidity(),
+                parametersMap.get(ParameterType.HUMIDITY).getMin(),
+                parametersMap.get(ParameterType.HUMIDITY).getMax(),
                 valueOf(parameters.getValue("Hum").toString()),
                 greenhouse.getActualModality() == Modality.AUTOMATIC);
     }
