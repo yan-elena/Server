@@ -13,7 +13,7 @@ db.greenhouse.insertMany( [
         { name: 'temperature',
           min: 10.0,
           max: 35.0,
-          unit: '° C'
+          unit: '℃'
         },
         { name: 'brightness',
           min: 3000.0,
@@ -44,7 +44,7 @@ db.greenhouse.insertMany( [
             { name: 'temperature',
               min: 8.0,
               max: 35.0,
-              unit: '° C'
+              unit: '℃'
             },
             { name: 'brightness',
               min: 4200.0,
@@ -75,7 +75,7 @@ db.greenhouse.insertMany( [
             { name: 'temperature',
               min: 8.0
               max: 35.0
-              unit: '° C'
+              unit: '℃'
             },
             { name: 'brightness',
               min: 4200.0

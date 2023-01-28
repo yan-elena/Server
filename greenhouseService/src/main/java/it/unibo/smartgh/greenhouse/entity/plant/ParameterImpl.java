@@ -1,5 +1,6 @@
 package it.unibo.smartgh.greenhouse.entity.plant;
 
+import java.nio.charset.StandardCharsets;
 import java.util.Objects;
 
 /**
@@ -15,7 +16,7 @@ public class ParameterImpl implements Parameter{
         this.name = name;
         this.min = min;
         this.max = max;
-        this.unit = unit;
+        this.unit = new String(unit.getBytes(), StandardCharsets.UTF_8);
     }
 
     @Override

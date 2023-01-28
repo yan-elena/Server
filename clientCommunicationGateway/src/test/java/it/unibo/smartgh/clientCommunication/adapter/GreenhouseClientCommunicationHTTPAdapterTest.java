@@ -47,7 +47,7 @@ public class GreenhouseClientCommunicationHTTPAdapterTest {
         put(ParameterType.TEMPERATURE, new ParameterBuilder("temperature")
                 .min(8.0)
                 .max(35.0)
-                .unit("° C")
+                .unit("\u2103")
                 .build());
         put(ParameterType.BRIGHTNESS, new ParameterBuilder("brightness")
                 .min(4200.0)
@@ -119,7 +119,8 @@ public class GreenhouseClientCommunicationHTTPAdapterTest {
                         operationPath)
                 .addQueryParam("id", GREENHOUSE_ID)
                 .send(testContext.succeeding(response -> testContext.verify(() -> {
-                    assertEquals(greenhouse, gson.fromJson(response.body().toString(), GreenhouseImpl.class));
+                    Greenhouse resp = gson.fromJson(response.body().toString(), GreenhouseImpl.class);
+                    assertEquals(greenhouse, resp);
                     testContext.completeNow();
                 })));
     }

@@ -69,7 +69,7 @@ public class GreenhouseHTTPAdapterTest {
         put(ParameterType.TEMPERATURE, new ParameterBuilder("temperature")
                 .min(8.0)
                 .max(35.0)
-                .unit("° C")
+                .unit("\u2103")
                 .build());
         put(ParameterType.BRIGHTNESS, new ParameterBuilder("brightness")
                 .min(4200.0)

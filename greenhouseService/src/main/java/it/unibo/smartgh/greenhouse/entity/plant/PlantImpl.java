@@ -1,5 +1,6 @@
 package it.unibo.smartgh.greenhouse.entity.plant;
 
+import java.util.Collections;
 import java.util.Map;
 import java.util.Objects;
 
@@ -45,7 +46,7 @@ public class PlantImpl implements Plant{
 
     @Override
     public Map<ParameterType, Parameter> getParameters() {
-        return this.parameters;
+        return Collections.unmodifiableMap(this.parameters);
     }
 
     @Override
