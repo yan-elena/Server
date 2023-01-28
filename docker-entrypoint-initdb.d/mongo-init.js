@@ -73,23 +73,23 @@ db.greenhouse.insertMany( [
     img: 'http://www.burkesbackyard.com.au/wp-content/uploads/2014/01/945001_399422270172619_1279327806_n.jpg',
     parameters: [
             { name: 'temperature',
-              min: 8.0
-              max: 35.0
+              min: 8.0,
+              max: 35.0,
               unit: '℃'
             },
             { name: 'brightness',
-              min: 4200.0
-              max: 130000.0
+              min: 4200.0,
+              max: 130000.0,
               unit: 'Lux'
             },
             { name: 'soilMoisture',
-              min: 20.0
-              max: 65.0
+              min: 20.0,
+              max: 65.0,
               unit: '%'
             },
             { name: 'humidity',
-              min: 30.0
-              max: 80.0
+              min: 30.0,
+              max: 80.0,
               unit: '%'
             }
         ]
