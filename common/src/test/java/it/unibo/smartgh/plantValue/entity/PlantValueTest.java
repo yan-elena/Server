@@ -1,7 +1,5 @@
-package it.unibo.smartgh.PlantValue.entity;
+package it.unibo.smartgh.plantValue.entity;
 
-import it.unibo.smartgh.plantValue.entity.PlantValue;
-import it.unibo.smartgh.plantValue.entity.PlantValueImpl;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
