@@ -2,6 +2,7 @@ package it.unibo.smartgh.presentation.deserializer;
 
 import com.google.gson.*;
 import it.unibo.smartgh.plantValue.entity.PlantValue;
+import it.unibo.smartgh.plantValue.entity.PlantValueBuilder;
 import it.unibo.smartgh.plantValue.entity.PlantValueImpl;
 
 import java.lang.reflect.Type;
@@ -17,22 +18,22 @@ public class PlantValueDeserializer  extends GeneralDeserializer implements Json
     @Override
     public PlantValue deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {
         DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy - HH:mm:ss");
-        PlantValue plantValue = new PlantValueImpl();
+        PlantValueBuilder builder = new PlantValueBuilder();
         if(json instanceof JsonObject){
             JsonObject object = (JsonObject) json;
-            plantValue.setGreenhouseId(this.getPropertyAsString(object, "greenhouseId"));
+            builder.greenhouseId(this.getPropertyAsString(object, "greenhouseId"));
             try {
                 System.out.println(this.getPropertyAsString(object, "date"));
-                plantValue.setDate(formatter.parse(this.getPropertyAsString(object, "date")));
+                builder.date(formatter.parse(this.getPropertyAsString(object, "date")));
             } catch (ParseException e) {
                 throw new JsonParseException("Not a valid date format (dd/MM/yyyy - HH:mm:ss)");
             }
-            plantValue.setValue(this.getPropertyAs(object, "value", Double.class, context));
+            builder.value(this.getPropertyAs(object, "value", Double.class, context));
         }else{
-            throw new JsonParseException("Not a valid plant value: " + plantValue);
+            throw new JsonParseException("Not a valid plant value");
         }
 
-        return plantValue;
+        return builder.build();
     }
 
 }
