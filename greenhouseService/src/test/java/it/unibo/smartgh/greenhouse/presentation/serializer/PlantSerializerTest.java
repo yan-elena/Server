@@ -98,8 +98,8 @@ class PlantSerializerTest {
         JsonArray array = new JsonArray();
         array.add(this.serializeTemperatureParameter());
         array.add(this.serializeSoilMoistureParameter());
-        array.add(this.serializeHumidityParameter());
         array.add(this.serializeBrightnessParameter());
+        array.add(this.serializeHumidityParameter());
         json.addProperty("name", this.plant.getName());
         json.addProperty("description", this.plant.getDescription());
         json.addProperty("img", this.plant.getImg());

@@ -103,10 +103,11 @@ class GreenhouseSerializerTest {
         JsonObject jsonPlant = new JsonObject();
         JsonArray array = new JsonArray();
 
+
         array.add(this.serializeTemperatureParameter());
         array.add(this.serializeSoilMoistureParameter());
-        array.add(this.serializeHumidityParameter());
         array.add(this.serializeBrightnessParameter());
+        array.add(this.serializeHumidityParameter());
         jsonPlant.addProperty("name", this.greenhouse.getPlant().getName());
         jsonPlant.addProperty("description", this.greenhouse.getPlant().getDescription());
         jsonPlant.addProperty("img", this.greenhouse.getPlant().getImg());
