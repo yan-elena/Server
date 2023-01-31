@@ -23,6 +23,7 @@ dependencies {
     testImplementation(project(":soilMoistureService"))
     testImplementation(project(":temperatureService"))
     testImplementation(project(":operationService"))
+    testImplementation("org.skyscreamer:jsonassert:1.5.1")
 }
 
 tasks.withType<Jar> {
