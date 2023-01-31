@@ -12,7 +12,7 @@ public interface GreenhouseAPI {
     /**
      * Get greenhouse.
      * @param id greenhouse id.
-     * @return the greenhouse.
+     * @return the @link{io.vertx.core.Future} representing the greenhouse.
      */
     Future<Greenhouse> getGreenhouse(String id);
 

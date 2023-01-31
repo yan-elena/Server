@@ -3,6 +3,7 @@ plugins {
     jacoco
     id("com.github.johnrengelman.shadow") version "5.2.0"
     alias(libs.plugins.gitSemVer)
+    alias(libs.plugins.javadocAggregate)
 }
 
 group = "it.unibo.smartgh"
