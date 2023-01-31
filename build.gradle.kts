@@ -18,6 +18,7 @@ allprojects{
         implementation(rootProject.libs.bundles.vertx.dependencies)
         implementation(rootProject.libs.mongodb.driver)
         implementation(rootProject.libs.gson)
+        implementation(rootProject.libs.jacoco)
         testImplementation(rootProject.libs.junit.api)
         testRuntimeOnly(rootProject.libs.junit.engine)
     }
