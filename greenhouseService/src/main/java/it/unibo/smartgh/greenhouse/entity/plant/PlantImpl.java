@@ -61,4 +61,5 @@ public class PlantImpl implements Plant{
     public int hashCode() {
         return Objects.hash(name, description, img, parameters);
     }
+
 }
