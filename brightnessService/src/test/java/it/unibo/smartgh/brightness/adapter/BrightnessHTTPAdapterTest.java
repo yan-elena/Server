@@ -13,7 +13,6 @@ import it.unibo.smartgh.plantValue.api.PlantValueModel;
 import it.unibo.smartgh.plantValue.controller.PlantValueController;
 import it.unibo.smartgh.plantValue.controller.PlantValueControllerImpl;
 import it.unibo.smartgh.plantValue.entity.PlantValue;
-import it.unibo.smartgh.plantValue.entity.PlantValueBuilder;
 import it.unibo.smartgh.plantValue.entity.PlantValueImpl;
 import it.unibo.smartgh.plantValue.persistence.PlantValueDatabase;
 import it.unibo.smartgh.plantValue.persistence.PlantValueDatabaseImpl;
@@ -50,10 +49,6 @@ public class BrightnessHTTPAdapterTest {
     private static final String greenhouseId = "63af0ae025d55e9840cbc1fa";
     private final int limit = 5;
 
-    private static PlantValue buildPlantValue(Date date, Double value){
-        return new PlantValueBuilder().greenhouseId(greenhouseId).date(date).value(value).build();
-    }
-
     @BeforeAll
     static public void insertValues(Vertx vertx, VertxTestContext testContext){
         configVariables();
@@ -65,9 +60,9 @@ public class BrightnessHTTPAdapterTest {
             Date date2 = formatter.parse(formatter.format(Date.from(LocalDateTime.now().plusSeconds(10).toInstant(ZoneOffset.UTC))));
             Date date3 = formatter.parse(formatter.format(Date.from(LocalDateTime.now().plusSeconds(20).toInstant(ZoneOffset.UTC))));
 
-            database.insertPlantValue(buildPlantValue(date1, value));
-            database.insertPlantValue(buildPlantValue(date2, value));
-            database.insertPlantValue(buildPlantValue(date3, value));
+            database.insertPlantValue(new PlantValueImpl(greenhouseId, date1, value));
+            database.insertPlantValue(new PlantValueImpl(greenhouseId, date2, value));
+            database.insertPlantValue(new PlantValueImpl(greenhouseId, date3, value));
 
         } catch (ParseException e) {
             throw new RuntimeException(e);
@@ -143,7 +138,7 @@ public class BrightnessHTTPAdapterTest {
         int expectedStatusCode = 201;
         try {
             Date date = formatter.parse(formatter.format(Date.from(LocalDateTime.now().toInstant(ZoneOffset.UTC))));
-            PlantValue plantValue = new PlantValueBuilder().greenhouseId(greenhouseId).date(date).value(value).build();
+            PlantValue plantValue = new PlantValueImpl(greenhouseId, date, value);
             String operationPath = "/brightness";
             client.post(SERVICE_PORT, SERVICE_HOST, operationPath)
                     .putHeader("content-type", "application/json")
