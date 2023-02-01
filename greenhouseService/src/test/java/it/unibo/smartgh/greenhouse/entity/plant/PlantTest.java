@@ -1,5 +1,6 @@
 package it.unibo.smartgh.greenhouse.entity.plant;
 
+import it.unibo.smartgh.plantValue.entity.PlantValue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -8,6 +9,9 @@ import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * Test to verify the correct creation of a {@link Plant} and its property.
+ */
 class PlantTest {
 
     private static Plant plant;

@@ -13,6 +13,9 @@ import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Test to verify the correct creation of a {@link PlantValueController} and its behaviour.
+ */
 class PlantValueControllerImplTest {
 
     private static final String PLANT_VALUE_TEST_DB_NAME = "plant_value";

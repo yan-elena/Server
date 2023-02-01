@@ -48,7 +48,7 @@ public class ParameterBuilder {
 
     /**
      * Create a new Parameter object
-     * @return
+     * @return the {@link Parameter} created.
      */
     public Parameter build(){
         return new ParameterImpl(name, min, max, unit);

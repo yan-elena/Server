@@ -6,6 +6,7 @@ import com.google.gson.JsonObject;
 import io.vertx.core.json.Json;
 import it.unibo.smartgh.greenhouse.entity.plant.*;
 import it.unibo.smartgh.greenhouse.presentation.GsonUtils;
+import it.unibo.smartgh.plantValue.entity.PlantValue;
 import org.json.JSONException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -16,6 +17,9 @@ import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Test to verify the correct serialization of a {@link Plant} and its property.
+ */
 class PlantSerializerTest {
 
     private Plant plant;

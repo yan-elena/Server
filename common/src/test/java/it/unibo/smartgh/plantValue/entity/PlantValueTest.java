@@ -7,6 +7,9 @@ import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * Test to verify the correct creation of a {@link PlantValue} and its property.
+ */
 class PlantValueTest {
 
     private static String greenhouseId;

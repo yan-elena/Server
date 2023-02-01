@@ -15,6 +15,9 @@ import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Test to verify the correct serialization of a {@link Operation} and its property.
+ */
 class OperationSerializerTest {
 
     private Operation operation;
@@ -27,7 +30,7 @@ class OperationSerializerTest {
     }
 
     @Test
-    void serialize() {
+    void testSerialize() {
         DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy - HH:mm:ss");
         JsonObject json = new JsonObject();
         json.addProperty("greenhouseId", this.operation.getGreenhouseId());

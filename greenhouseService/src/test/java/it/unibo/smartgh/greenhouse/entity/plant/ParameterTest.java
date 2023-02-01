@@ -1,10 +1,14 @@
 package it.unibo.smartgh.greenhouse.entity.plant;
 
+import it.unibo.smartgh.plantValue.entity.PlantValue;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * Test to verify the correct creation of a {@link Parameter} and its property.
+ */
 class ParameterTest {
 
     private static Parameter parameter;

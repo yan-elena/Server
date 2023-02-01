@@ -11,6 +11,9 @@ import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * Test to verify the correct deserialization of a {@link PlantValue} and its property.
+ */
 class PlantValueDeserializerTest {
 
     private PlantValue plantValue;

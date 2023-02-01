@@ -5,6 +5,7 @@ import it.unibo.smartgh.greenhouse.entity.greenhouse.GreenhouseImpl;
 import it.unibo.smartgh.greenhouse.entity.greenhouse.Modality;
 import it.unibo.smartgh.greenhouse.entity.plant.*;
 import it.unibo.smartgh.greenhouse.presentation.GsonUtils;
+import it.unibo.smartgh.plantValue.entity.PlantValue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -13,6 +14,9 @@ import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Test to verify the correct creation of a {@link Plant} and its property.
+ */
 class PlantDeserializerTest {
 
     private Plant plant;

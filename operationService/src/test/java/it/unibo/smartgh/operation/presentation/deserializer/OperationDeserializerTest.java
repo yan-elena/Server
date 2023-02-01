@@ -12,6 +12,9 @@ import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Test to verify the correct deserialization of a {@link Operation} and its property.
+ */
 class OperationDeserializerTest {
 
     private Operation operation;

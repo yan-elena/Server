@@ -5,11 +5,15 @@ import it.unibo.smartgh.greenhouse.entity.plant.Parameter;
 import it.unibo.smartgh.greenhouse.entity.plant.ParameterBuilder;
 import it.unibo.smartgh.greenhouse.entity.plant.ParameterImpl;
 import it.unibo.smartgh.greenhouse.presentation.GsonUtils;
+import it.unibo.smartgh.plantValue.entity.PlantValue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Test to verify the correct deserialization of a {@link Parameter} and its property.
+ */
 class ParameterDeserializerTest {
 
     private Parameter parameter;
