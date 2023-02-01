@@ -26,7 +26,7 @@ jobs:
             $content = cat greenhouseService/src/main/resources/initDb.txt
             mongo --eval "$content"
       - name: build
-        run: ./gradlew build -x test
+        run: ./gradlew build -x test aggregateJavadocJar
       - name: test
         run: ./gradlew test --parallel || ./gradlew test --parallel || ./gradlew test --parallel
   release:
