@@ -124,6 +124,8 @@ class GreenhouseSerializerTest {
         json.addProperty("id", this.greenhouse.getId());
         json.addProperty("modality", this.greenhouse.getActualModality().toString());
 
+        System.out.println(json);
+
         try {
             JSONAssert.assertEquals(json.toString(), this.gson.toJson(this.greenhouse), false);
         } catch (JSONException e) {
